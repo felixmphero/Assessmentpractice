@@ -7,32 +7,49 @@
 </head>
 <body>
     <script>
-        class author{
-            constructor(userid,name,profilepictue){
-                this.userid=userid;
-                this.name=name;
-                this.profilepicture=profilepicture;
-            }
-            content(){
-                console.log("media type-image, media url-https://url.net/123/pic.jpg");
-            }
-engangement(){
-    console
-}
-        }
+  //implementing javascript using object literals//
+  const postliteral={
+    id:123456789,author:{
+        userid:"ugyy7gh7",
+        name: "john Doe",profilepicture:"https://url.net/123/pic.jpg"
+    },
+    content: [
+    {type:"image",url:"https://url.net/123/pic3.jpg"},{type: "video",url:"https://url.net/123/pic4.jpg"},
+    
+    ],engangements:{
+        likes:254,loves :34,hha:67,wow:23,sad:0,angry:0,shares:45
+    },comments:[{id:"c767",userid:"uytutyt6",text:"gojas wakwathu!",timestamp:"2025-08-04T09:15:00Z"},
+    {id:"c768",userid:"yyytywe",text:"looking great my dear!",timestamp:"2025-08-04T09:15:00Z"}],privacy:"public",createdat:"2025-08-04T08:30:00Z",updatedat:"2025-08-04T09:00:00Z",tags:"Alice wawukali, james wantali ,peter woyera"
+  }
+  console.log(postliteral.author.name);
+  
 
-        /*object literals*/
-        const Author={
-            user_id:"ugyygh7",name:"john doe",profilepicture:"https://url.net/123/pic.jpg"
-        };
-        console.log(Author);
-        const comments={
-            commentid:"c76",
-            userid:"uytutyt6",
-            text:"Gojasi wa kwathu",
-            timestamp:"2025-08-04T09:15:00Z"
+  //using class//
+  class post{
+    constructor(){
+        this.id=123456789;
+        this.author={
+            userid:"ugy7gh7",name:"johz man",profilepicture:"https://url.net/123/pic.jpg"
         }
-        console.log(comments);
+    }
+  }
+
+  //adding a new comment//
+postliteral.comments.push({
+    id:"c769",
+    userid:"newuser",
+    text:"Nice post!",
+    timestamp:new Date().toISOString()
+});
+console.log(postliteral.comments);
+/*
+postliteral.comments.likes++;
+postliteral.tags.pop();*/
+
+const jsonstring=JSON.stringify(postliteral);
+const parseobject=JSON.parse(jsonstring);
+console.log(parseobject);
     </script>
+    
 </body>
 </html
