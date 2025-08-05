@@ -7,10 +7,11 @@
 </head>
 <body>
    <script>
-    let name="string";
-    console.log(
-        
-    )
+    function countvowels(str){
+        const vowels = str.match(/[aeiou]/gi);
+        return vowels? vowels.length : 0;
+    }
+    console.log(countvowels("Hello world"));
    </script> 
 </body>
 </html>
