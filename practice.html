@@ -35,6 +35,114 @@
         //arrow functions//
         const cheers=(name)=>console.log("hello"+name);
         cheers("james");
-    </script>
+        //finding larger number//
+        const largernum=(value1,value2,value3)=>{
+            if(value1 > value2)
+                return value1 +"is larger";
+            
+           /* else if(value2 > value1 && value2>value3){
+                return value2 + "is larger";
+            }*/
+            else return value2 +"is larger";
+        
+        }
+        console.log(largernum(45,55));
+//arrow functions with circle area//
+const circlearea=(radius=0)=>{
+    let area=radius * radius * Math.PI;
+    console.log('area of circle is${area}');
+    
+}
+circlearea(9);
+console.log(circlearea(4));
+//callback functions ->function passed as an argument toanother function//
+const circumference =(hadius=0,callback) =>{
+    let area = radius * radius *Math.PI;
+    callback(area);
+}
+const printarea=(area)=>{
+    console.log('the area is ${srea}');
+};
+circlearea(23,printarea);
+console.log(printarea);
+//objects literals//
+const car=new Object();
+car.make="BMW";
+car.model="BN";
+car.engine_capaciy=6.5;
+console.log(car);
+//using constructor function//
+function Car(make,model,engine_capaciy){
+    this.make=make;
+    this.model=model;
+    this.engine_capaciy=engine_capaciy;
+
+}
+const van=new Car("beforwad","prado",1.5);
+van.color="black";
+console.log(van);
+//ISSUE OF INHERITANCE//
+class motor{
+    constructor(make,model){
+        this.make=make;
+        this.model=model;
+    }
+    printDetails(){
+        console.log('make:${this.make},model:${this.model}');
+    }
+    }
+    class electrical extends motor{
+        constructor(make,model,batterysize,range){
+            super(make,model);
+            this.batterysize=batterysize;
+            this.range=range;
+        }
+    printDetails(){
+        super.printDetails();
+        console.log('battery size: ${this.batterysize},range: ${this.range}');
+    }
+
+}
+const steel=new motor("fjff","fbyrfyr",89.0);
+steel.printDetails();
+const steel2=new electrical("ffn","chitete","garage",45);
+steel2.printDetails();  
+//converting javascript object to JSON//
+const make={
+    id:12345,
+    make:"bmw",
+    model:"x1",
+    engine_capacity:"1.9",
+    year:2015,
+    seats:5,
+    color:"black",
+    gearbox:{transmission:"automatic",num_gers:8},
+    weight:1660,
+}  ;
+json_object=JSON.stringify(make);
+console.log(json_object);
+const car_from_json = JSON.parse(json_object);
+console.log(car_from_json);
+//the for each function//
+//the filter function//
+//the map function//
+//=>fr each provides a callback function that executes every
+//time it loopsthrough the elements
+//for each
+const numbers=[5,4,3,2,6];
+numbers.forEach((value,index,Array)=>{
+    console.log(value *2 );
+
+});
+const even_numbers = numbers.filter((value,index,Array)=>{
+    return value %2 == 0;
+});
+console.log(even_numbers);
+//map
+const number_squared = numbers.map((value,index,array) =>{
+return value *2;
+});
+console.log(number_squared);
+</script>
 </body>
 </html>
