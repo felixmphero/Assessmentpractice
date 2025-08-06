@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //for loop//
+        for (let i=0;i<10;i++){
+            console.log(i);
+        }
+        //do while loop//
+        let num=0;
+        do{console.log(num);
+            num+=1;
+        
+        }while(num<5)
+        //for of//
+        const nums=[4,5,3,9];
+        for (const i of nums){
+            console.log(i);
+        }
+        //dealing with functions
+        function greet(name){
+            console.log("hello"+name);
+        }
+        function add(num1,num2){
+            return num1 + num2;
+        }
+        greet("felix");
+        console.log(greet);
+       console.log(add(10,20)); 
+        //arrow functions//
+        const cheers=(name)=>console.log("hello"+name);
+        cheers("james");
+    </script>
+</body>
+</html>
